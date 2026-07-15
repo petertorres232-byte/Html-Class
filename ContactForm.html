@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Only Contact Form</title>
+</head>
+<body>
+
+    <h1>Contact Form</h1>
+
+    <form action="/submit-form" method="POST">
+        
+        <p>
+            <label for="full-name">Full Name:</label><br>
+            <input type="text" id="full-name" name="full_name" placeholder="John Doe" required>
+        </p>
+
+        <p>
+            <label for="email-address">Email Address:</label><br>
+            <input type="email" id="email-address" name="email" placeholder="example@email.com" required>
+        </p>
+
+        <p>
+            <label for="topic">Topic of Inquiry:</label><br>
+            <select id="topic" name="topic" required>
+                <option value="">-- Please choose an option --</option>
+                <option value="support">Technical Support</option>
+                <option value="sales">Sales & Pricing</option>
+                <option value="feedback">General Feedback</option>
+            </select>
+        </p>
+
+        <fieldset>
+            <legend>Preferred Contact Method:</legend>
+            
+            <input type="radio" id="contact-email" name="preferred_contact" value="email" checked>
+            <label for="contact-email">Email</label><br>
+            
+            <input type="radio" id="contact-phone" name="preferred_contact" value="phone">
+            <label for="contact-phone">Phone</label><br>
+            
+            <input type="radio" id="contact-none" name="preferred_contact" value="none">
+            <label for="contact-none">Do Not Contact</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Subscriptions & Updates:</legend>
+            
+            <input type="checkbox" id="newsletter" name="subscribe" value="newsletter">
+            <label for="newsletter">Subscribe to our monthly newsletter</label><br>
+            
+            <input type="checkbox" id="terms" name="agree_terms" value="accepted" required>
+            <label for="terms">I agree to the terms and conditions</label>
+        </fieldset>
+
+        <p>
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" placeholder="Type your message here..." required></textarea>
+        </p>
+
+        <p>
+            <button type="submit">Submit Form</button>
+        </p>
+
+    </form>
+
+</body>
+</html>
