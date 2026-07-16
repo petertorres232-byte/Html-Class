@@ -1,0 +1,171 @@
+/* ==========================================================================
+   1. Base Reset & Page Layout
+   ========================================================================== */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: #f4f7f6;
+    color: #333333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Ensure all sizing behaves predictably */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* ==========================================================================
+   2. Container & Form Structure
+   ========================================================================== */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #1a1a1a;
+    font-size: 28px;
+    text-align: center;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   3. Labels & Form Controls
+   ========================================================================== */
+label {
+    display: inline-block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+/* Styling for the "(Required)" emphasis text inside labels */
+label strong {
+    color: #dc3545;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+/* Text Inputs, Select Dropdowns, and Textareas */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Remove default appearance for clean cross-browser rendering */
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Interactive States */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+}
+
+/* Placeholder styling */
+::placeholder {
+    color: #a0a0a0;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   4. Fieldsets, Radios & Checkboxes
+   ========================================================================== */
+fieldset {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    background-color: #fefefe;
+}
+
+legend {
+    font-weight: 600;
+    font-size: 14px;
+    color: #4a4a4a;
+    padding: 0 8px;
+}
+
+/* Align inline layout for radio & checkbox labels */
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+fieldset label {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 15px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* Remove margin on the last item in a line breaks list inside fieldsets */
+fieldset br:last-of-type {
+    display: none;
+}
+
+/* ==========================================================================
+   5. Submit Action Button
+   ========================================================================== */
+button[type="submit"] {
+    width: 100%;
+    background-color: #0066cc;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0052a3;
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
